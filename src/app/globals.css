@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "Sora", system-ui, sans-serif;
+    --font-body: "DM Sans", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+  body { min-height: 100dvh; }
+  ::selection { background: #e51919; color: white; }
+}
+
+@layer utilities {
+  .gap-inherit { gap: inherit; }
+}
