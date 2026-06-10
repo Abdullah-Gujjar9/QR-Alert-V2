@@ -33,6 +33,28 @@ export default function ScanPage() {
   const [data, setData] = useState<PublicScanView | null>(null);
   const [modal, setModal] = useState<ModalType>(null);
   const [activationCode, setActivationCode] = useState("");
+  const actions = [
+  {
+    title: "Report Wrong Parking",
+    description:
+      "Attach a photo and notify the owner via WhatsApp instantly — no number shared.",
+  },
+  {
+    title: "Call the Owner",
+    description:
+      "One-tap masked call through Twilio Proxy — neither party's real number is ever exposed.",
+  },
+  {
+    title: "Report Emergency",
+    description:
+      "Send an emergency WhatsApp + photo to the owner and their emergency contact at once.",
+  },
+  {
+    title: "Accident Concern",
+    description:
+      "Share GPS location with emergency services, alert family, and attach accident photo.",
+  },
+];
 
   // Fetch sticker info
   useEffect(() => {
