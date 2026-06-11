@@ -1,45 +1,51 @@
 "use client";
 
 import { Html5QrcodeScanner } from "html5-qrcode";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function CameraScanner({
   onScan,
 }: {
   onScan: (qrCode: string) => void;
 }) {
+  const scannerRef = useRef<Html5QrcodeScanner | null>(null);
+  const readerRef = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
-    let scanner: Html5QrcodeScanner | null = null;
+    if (!readerRef.current) return;
 
-    // Delay ensures DOM is mounted
-    const timeout = setTimeout(() => {
-      const element = document.getElementById("reader");
+    // Initialize scanner only once
+    scannerRef.current = new Html5QrcodeScanner(
+      readerRef.current.id,
+      {
+        fps: 10,
+        qrbox: 300,
+      },
+      false
+    );
 
-      if (!element) return; // prevent crash
+    scannerRef.current.render(
+      (decodedText) => {
+        // Stop scanner after success
+        scannerRef.current
+          ?.clear()
+          .catch(() => {});
 
-      scanner = new Html5QrcodeScanner(
-        "reader",
-        {
-          fps: 10,
-          qrbox: 300,
-        },
-        false
-      );
+        onScan(decodedText);
+      },
+      () => {
+        // ignore scan errors
+      }
+    );
 
-      scanner.render(
-        (decodedText) => {
-          scanner?.clear().catch(() => {});
-          onScan(decodedText);
-        },
-        () => {}
-      );
-    }, 300); // small delay fixes null issue
-
+    // Cleanup on unmount
     return () => {
-      clearTimeout(timeout);
-      scanner?.clear().catch(() => {});
+      scannerRef.current
+        ?.clear()
+        .catch(() => {});
+      scannerRef.current = null;
     };
   }, [onScan]);
 
-  return <div id="reader"  />;
+  return <div id="reader" ref={readerRef} />;
 }
