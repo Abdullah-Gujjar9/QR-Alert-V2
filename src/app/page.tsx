@@ -41,6 +41,12 @@ export default function HomePage() {
             <Link href="/q/DEMO" className="inline-flex items-center gap-2 rounded-2xl border border-ink-700 px-7 py-4 text-base font-semibold text-white hover:bg-ink-800 transition-colors">
               See demo scan
             </Link>
+            <Link
+              href="/activate/scan"
+              className="inline-flex items-center gap-2 rounded-2xl border border-ink-700 px-7 py-4 text-base font-semibold text-white hover:bg-ink-800 transition-colors"
+            >
+              Scan QR
+            </Link>
           </div>
         </div>
       </section>
@@ -125,16 +131,16 @@ export default function HomePage() {
 }
 
 const ACTIONS = [
-  { icon: Car,           title: "Report Wrong Parking",  body: "Attach a photo and notify the owner via WhatsApp instantly — no number shared.",         border: "border-amber-200",  iconBg: "bg-amber-50",  iconColor: "text-amber-600" },
-  { icon: Phone,         title: "Call the Owner",         body: "One-tap masked call through Twilio Proxy — neither party's real number is ever exposed.", border: "border-brand-200", iconBg: "bg-brand-50",  iconColor: "text-brand-600" },
-  { icon: AlertTriangle, title: "Report Emergency",       body: "Send an emergency WhatsApp + photo to the owner and their emergency contact at once.",    border: "border-danger-200", iconBg: "bg-danger-50", iconColor: "text-danger-600" },
-  { icon: MapPin,        title: "Accident Concern",       body: "Share GPS location with emergency services, alert family, and attach accident photo.",     border: "border-ink-200",   iconBg: "bg-ink-100",   iconColor: "text-ink-700" },
+  { icon: Car, title: "Report Wrong Parking", body: "Attach a photo and notify the owner via WhatsApp instantly — no number shared.", border: "border-amber-200", iconBg: "bg-amber-50", iconColor: "text-amber-600" },
+  { icon: Phone, title: "Call the Owner", body: "One-tap masked call through Twilio Proxy — neither party's real number is ever exposed.", border: "border-brand-200", iconBg: "bg-brand-50", iconColor: "text-brand-600" },
+  { icon: AlertTriangle, title: "Report Emergency", body: "Send an emergency WhatsApp + photo to the owner and their emergency contact at once.", border: "border-danger-200", iconBg: "bg-danger-50", iconColor: "text-danger-600" },
+  { icon: MapPin, title: "Accident Concern", body: "Share GPS location with emergency services, alert family, and attach accident photo.", border: "border-ink-200", iconBg: "bg-ink-100", iconColor: "text-ink-700" },
 ];
 
 const STEPS = [
-  { title: "Buy a sticker",     body: "Get a QRAlert sticker with a unique activation code printed on it." },
-  { title: "Scan & activate",   body: "Scan the QR, fill in your vehicle and contact details, submit." },
-  { title: "Stick it on",       body: "Attach to your car or bike. Anyone who scans it can help — instantly." },
+  { title: "Buy a sticker", body: "Get a QRAlert sticker with a unique activation code printed on it." },
+  { title: "Scan & activate", body: "Scan the QR, fill in your vehicle and contact details, submit." },
+  { title: "Stick it on", body: "Attach to your car or bike. Anyone who scans it can help — instantly." },
 ];
 
 const PRIVACY = [
