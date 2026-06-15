@@ -51,3 +51,5 @@ Desktop.ini
 
 # Misc
 *.env
+
+/src/generated/prisma

@@ -36,6 +36,45 @@ export default function HomePage() {
                 Activate sticker <ArrowRight size={13} />
               </Link>
             </div>
+            <span className="font-display text-lg font-bold text-ink-950">QR<span className="text-danger-600">Alert</span></span>
+          </div>
+          <Link href="/activate/new" className="inline-flex items-center gap-1.5 rounded-xl bg-ink-950 px-4 py-2 text-sm font-semibold text-white hover:bg-ink-800 transition-colors">
+            Activate sticker <ArrowRight size={14} />
+          </Link>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="relative overflow-hidden border-b border-ink-100 bg-ink-950 text-white">
+        <div className="pointer-events-none absolute inset-0 opacity-[0.04]"
+          style={{ backgroundImage: "linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)", backgroundSize: "48px 48px" }} />
+        <div className="relative mx-auto max-w-5xl px-4 sm:px-6 py-20 md:py-32">
+          <div className="inline-flex items-center gap-2 rounded-full border border-danger-600/40 bg-danger-600/10 px-4 py-1.5 text-sm font-semibold text-danger-400 mb-6">
+            <span className="h-2 w-2 rounded-full bg-danger-500 animate-pulse" />
+            Pakistan's First Smart Vehicle Tag
+          </div>
+          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] tracking-tight mb-6">
+            One sticker.<br /><span className="text-danger-500">Every emergency</span><br />handled.
+          </h1>
+          <p className="text-lg sm:text-xl text-ink-400 leading-relaxed mb-10 max-w-xl">
+            Stick QRAlert on your car or bike. Anyone who scans it can reach you securely — wrong parking, accidents, emergencies — without ever seeing your real number.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/activate/new" className="inline-flex items-center gap-2 rounded-2xl bg-danger-600 px-7 py-4 text-base font-bold text-white hover:bg-danger-700 transition-colors shadow-lg shadow-danger-600/30">
+              <QrCode size={20} /> Activate my sticker
+            </Link>
+            <Link href="/q/DEMO" className="inline-flex items-center gap-2 rounded-2xl border border-ink-700 px-7 py-4 text-base font-semibold text-white hover:bg-ink-800 transition-colors">
+              See demo scan
+            </Link>
+            <Link
+              href="/activate/scan"
+              className="inline-flex items-center gap-2 rounded-2xl border border-ink-700 px-7 py-4 text-base font-semibold text-white hover:bg-ink-800 transition-colors"
+            >
+              Scan QR
+            </Link>
+          </div>
+        </div>
+      </section>
 
           </div>
         </header>
@@ -305,16 +344,16 @@ export default function HomePage() {
 
 // Constant arrays 
 const ACTIONS = [
-  { icon: Car,           title: "Report Wrong Parking",  body: "Attach a photo and notify the owner via WhatsApp instantly no number shared.",         border: "border-amber-200",  iconBg: "bg-amber-50",  iconColor: "text-amber-600" },
-  { icon: Phone,         title: "Call the Owner",         body: "One-tap masked call through Twilio Proxy neither party's real number is ever exposed.", border: "border-brand-200", iconBg: "bg-brand-50",  iconColor: "text-brand-600" },
-  { icon: AlertTriangle, title: "Report Emergency",       body: "Send an emergency WhatsApp + photo to the owner and their emergency contact at once.",    border: "border-danger-200", iconBg: "bg-danger-50", iconColor: "text-danger-600" },
-  { icon: MapPin,        title: "Accident Concern",       body: "Share GPS location with emergency services, alert family, and attach accident photo.",     border: "border-ink-200",   iconBg: "bg-ink-100",   iconColor: "text-ink-700" },
+  { icon: Car, title: "Report Wrong Parking", body: "Attach a photo and notify the owner via WhatsApp instantly — no number shared.", border: "border-amber-200", iconBg: "bg-amber-50", iconColor: "text-amber-600" },
+  { icon: Phone, title: "Call the Owner", body: "One-tap masked call through Twilio Proxy — neither party's real number is ever exposed.", border: "border-brand-200", iconBg: "bg-brand-50", iconColor: "text-brand-600" },
+  { icon: AlertTriangle, title: "Report Emergency", body: "Send an emergency WhatsApp + photo to the owner and their emergency contact at once.", border: "border-danger-200", iconBg: "bg-danger-50", iconColor: "text-danger-600" },
+  { icon: MapPin, title: "Accident Concern", body: "Share GPS location with emergency services, alert family, and attach accident photo.", border: "border-ink-200", iconBg: "bg-ink-100", iconColor: "text-ink-700" },
 ];
 
 const STEPS = [
-  { title: "Buy a sticker",     body: "Get a QRAlert sticker with a unique activation code printed on it." },
-  { title: "Scan & activate",   body: "Scan the QR, fill in your vehicle and contact details, submit." },
-  { title: "Stick it on",       body: "Attach to your car or bike. Anyone who scans it can help instantly." },
+  { title: "Buy a sticker", body: "Get a QRAlert sticker with a unique activation code printed on it." },
+  { title: "Scan & activate", body: "Scan the QR, fill in your vehicle and contact details, submit." },
+  { title: "Stick it on", body: "Attach to your car or bike. Anyone who scans it can help — instantly." },
 ];
 
 const PRIVACY_ITEMS = [
