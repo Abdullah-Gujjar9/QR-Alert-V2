@@ -107,7 +107,7 @@ export default function ScanPage() {
           </div>
           <h2 className="font-display text-2xl font-bold text-ink-950">Sticker not activated yet</h2>
           <p className="text-ink-500 text-sm max-w-xs">This QRAlert sticker hasn't been set up. If you're the owner, activate it now.</p>
-          <Button variant="amber" size="lg" onClick={() => router.push(`/activate/start`)}>
+          <Button variant="amber" size="lg" onClick={() => router.push(`/activate/${activationCode || "start"}`)}>
             Activate this sticker
           </Button>
         </div>
