@@ -1,12 +1,13 @@
 "use client"; 
 import React, { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform, useMotionTemplate } from "framer-motion";
+import type { LucideIcon } from "lucide-react";
 interface ActionItem {
   title: string;
   body: string;
   iconBg: string;
   iconColor: string;
-  icon: React.ComponentType<any>; 
+  icon: LucideIcon;
 }
 interface ActionCardProps {
   a: ActionItem;

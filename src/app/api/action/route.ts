@@ -28,7 +28,8 @@ export async function POST(req: NextRequest) {
 
     const ownerName = `${s.owner_first_name} ${s.owner_last_name}`;
     const plate     = s.plate_number;
-    let waSent = false, smsSent = false, callInitiated = false;
+    let waSent = false, callInitiated = false;
+    const smsSent = false;
 
     // Upload image if provided
     let imagePath: string | null = null;

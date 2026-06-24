@@ -107,7 +107,7 @@ export default function ScanPage() {
           </div>
           <h2 className="font-display text-2xl font-bold text-ink-950">Sticker not activated yet</h2>
           <p className="text-ink-500 text-sm max-w-xs">This QRAlert sticker hasn't been set up. If you're the owner, activate it now.</p>
-          <Button variant="amber" size="lg" onClick={() => router.push(`/activate/${activationCode || "start"}`)}>
+          <Button variant="amber" size="lg" onClick={() => router.push(`/activate/start`)}>
             Activate this sticker
           </Button>
         </div>
@@ -160,7 +160,7 @@ export default function ScanPage() {
         {data.note && (
           <div className="rounded-2xl bg-amber-50 border border-amber-200 px-4 py-3 flex gap-3 items-start">
             <MessageSquare size={15} className="text-amber-600 shrink-0 mt-0.5" />
-            <p className="text-sm text-amber-800 italic">"{data.note}"</p>
+            <p className="text-sm text-amber-800 italic">&quot;{data.note}&quot;</p>
           </div>
         )}
 
@@ -342,7 +342,7 @@ function ActionModal({ modal, stickerId, ownerName, plate, onClose }: {
           <div className="space-y-4">
             <div className="rounded-2xl bg-brand-50 border border-brand-200 p-4 text-sm text-brand-800">
               <p className="font-semibold mb-1">🔒 How masked calls work</p>
-              <p>Twilio Proxy bridges you and {ownerName}. Neither of you ever sees the other's real number.</p>
+              <p>Twilio Proxy bridges you and {ownerName}. Neither of you ever sees the other&apos;s real number.</p>
             </div>
             <div>
               <label className="block text-sm font-semibold text-ink-800 mb-1.5">Your phone number (optional)</label>

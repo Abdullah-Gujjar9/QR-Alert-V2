@@ -5,10 +5,17 @@ import Link from "next/link";
 import CameraScanner from "@/components/CameraScanner";
 import ImageScanner from "@/components/ImageScanner";
 
+type ScannedVehicle = {
+  ownerName: string;
+  vehicleName: string;
+  numberPlate: string;
+  phone: string;
+};
+
 export default function ScanPage() {
   const [tab, setTab] = useState<"camera" | "image">("camera");
   const [loading, setLoading] = useState(false);
-  const [vehicle, setVehicle] = useState<any>(null);
+  const [vehicle, setVehicle] = useState<ScannedVehicle | null>(null);
   const [invalidQR, setInvalidQR] = useState(false);
   const [qrCode, setQrCode] = useState("");
 
