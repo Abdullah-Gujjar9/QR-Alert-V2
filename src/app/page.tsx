@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 import React from "react";
@@ -15,18 +14,11 @@ import {
   ArrowRight,
   CheckCircle,
 } from "lucide-react";
-=======
-"use client"; 
-import React from "react";
-import { ShieldAlert, QrCode, Phone, AlertTriangle, MapPin, Car, Bike, ArrowRight, CheckCircle } from "lucide-react";
-import Link from "next/link";
-import ActionCard from "@/components/ui/ActionCard";
->>>>>>> 813bac37a17634beab5ca4eed12c1bbb0be63ff1
+
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white selection:bg-danger-500 selection:text-white">
-<<<<<<< HEAD
 
       {/* NAVBAR */}
       <div className="fixed top-4 left-0 z-50 w-full px-4 sm:px-6">
@@ -494,7 +486,7 @@ export default function HomePage() {
     </div>
   );
 }
-<<<<<<< HEAD
+
 
 /* Floating Badge */
 function FloatingBadge({ className, color, label }: any) {
@@ -571,5 +563,5 @@ const PRIVACY_ITEMS = [
   { title: "Secure Routing", body: "WhatsApp messages are sent directly from QRAlert, keeping your phone hidden." },
   { title: "Full Audit Logs", body: "A real-time action audit log tracks every single scan and alert instantly." },
   { title: "Instant Kill-Switch", body: "Your vehicle sticker can be suspended or deleted instantly if lost or stolen." },
->>>>>>> 813bac37a17634beab5ca4eed12c1bbb0be63ff1
+
 ];
