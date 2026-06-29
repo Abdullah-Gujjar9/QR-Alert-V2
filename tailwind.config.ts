@@ -51,6 +51,7 @@ const config: Config = {
         "scale-in":  "scale-in 0.3s ease-out",
         "pulse-red": "pulse-red 2s ease-in-out infinite",
         "wa-bounce": "wa-bounce 1.4s ease-in-out infinite",
+    
       },
       keyframes: {
         "fade-up":  { "0%": { opacity: "0", transform: "translateY(14px)" }, "100%": { opacity: "1", transform: "translateY(0)" } },
